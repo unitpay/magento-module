@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Unitpay_Unitpay>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Sales/>
+                <Mage_Checkout/>
+            </depends>
+        </Unitpay_Unitpay>
+    </modules>
+</config>
