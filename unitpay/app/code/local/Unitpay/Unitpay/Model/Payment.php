@@ -27,6 +27,7 @@ class Unitpay_Unitpay_Model_Payment extends Mage_Payment_Model_Method_Abstract
      **/
     public function generateForm()
     {
+        $domain = Mage::getStoreConfig('payment/unitpay/unitpay_domain');
 
         $order = $this->getOrder();
         $sum = number_format($order->getGrandTotal(), 2, '.', '');
@@ -35,7 +36,7 @@ class Unitpay_Unitpay_Model_Payment extends Mage_Payment_Model_Method_Abstract
 
         $form = '';
         $form .=
-            '<form id="unitpay" action="https://unitpay.ru/pay/' . Mage::getStoreConfig('payment/unitpay/unitpay_public_key') . '" method="POST" id="unitpay_form">'.
+            '<form id="unitpay" action="https://' . $domain . '/pay/' . Mage::getStoreConfig('payment/unitpay/unitpay_public_key') . '" method="POST" id="unitpay_form">'.
             '<input type="hidden" name="sum" value="' . $sum . '" />'.
             '<input type="hidden" name="account" value="' . $account . '" />'.
             '<input type="hidden" name="desc" value="' . $desc . '" />'.
