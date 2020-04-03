@@ -2,7 +2,7 @@
 /**
  * @category    Unitpay
  * @package     Unitpay_Unitpay
- * @copyright   Copyright (c) 2012 Unitpay (http://www.unitpay.ru)
+ * @copyright   Copyright (c) 2012 Unitpay
  * @license     BSD
  */
 class Unitpay_Unitpay_IndexController extends Mage_Core_Controller_Front_Action
